@@ -28,3 +28,28 @@ describe('cube function', function(){
     })
 
 })
+
+test('using .toContain', function(){
+    const colors = ['red', 'orange', 'blue'];
+    expect(colors).toContain('red');
+    expect('hello').toContain('hell');
+})
+
+test('numeric matcher', function(){
+    expect(7).toBeGreaterThanOrEqual(2);
+    expect(10).toBeGreaterThanOrEqual(4);
+})
+
+test('testing using a boolean matcher', function(){
+    expect(9).toBeTruthy();
+    expect('').toBeFalsy();
+})
+
+test('testing using "any"', function(){
+    expect('asdjkgh').toEqual(expect.any(String));
+    expect(10).toEqual(expect.any(Number));
+})
+
+test('testing using the .not matcher', function(){
+    expect(10).not.toEqual(11);
+})
