@@ -1,4 +1,6 @@
 const { getCartTotal } = require("./cart");
+
+
 describe("getCartTotal", function () {
   let cart;
   beforeEach(function () {
@@ -8,14 +10,17 @@ describe("getCartTotal", function () {
       { item: "pretzels", price: 8.99, qty: 10 },
     ];
   })
+
   afterEach(function () {
     console.log("AFTER EACH!")
   })
+
   beforeAll(function () {
     console.log("BEFORE ALL")
   })
+
   afterAll(function () {
-    console.log("after ALL")
+    console.log("AFTER ALL")
   })
 
   test("get total w/o discount", function () {
